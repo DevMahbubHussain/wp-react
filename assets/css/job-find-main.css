@@ -1,0 +1,5 @@
+/* CSS for highlighting the current submenu item */
+#toplevel_page_jobfind .wp-submenu a.current {
+    font-weight: bold;
+    color: #007cba; /* Matches WordPress default admin styling */
+}

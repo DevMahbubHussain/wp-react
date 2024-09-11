@@ -1,0 +1,40 @@
+{
+	"name": "wordpress-project-template",
+	"version": "0.1.0",
+	"description": "A starting point for WordPress projects",
+	"author": "Mahbub Hussain",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"setup": "npm install --force && composer install",
+		"build": "npm run clean && wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"format:js": "wp-scripts format",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"clean": "rm -rf assets/js/*",
+		"start": "wp-scripts start"
+	},
+	"prettier": "@wordpress/prettier-config",
+	"devDependencies": {
+		"@types/react": "^18.3.5",
+		"@types/react-dom": "^18.3.0",
+		"@types/react-router-dom": "^5.3.3",
+		"@wordpress/scripts": "^29.0.0",
+		"autoprefixer": "^10.4.14",
+		"eslint-plugin-prettier": "^4.0.0",
+		"postcss": "^8.4.27",
+		"prettier": "npm:wp-prettier@2.2.1-beta-1",
+		"sass": "^1.64.1",
+		"tailwindcss": "^3.3.3",
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.6.2"
+	},
+	"dependencies": {
+		"@wordpress/element": "^6.7.0",
+		"react-router-dom": "^6.26.2"
+	}
+}

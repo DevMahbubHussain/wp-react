@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "jsx": "react-jsx",
+    "module": "commonjs",
+    "allowJs": true,
+    "checkJs": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    // "outDir": "./build/js",  /* Compiled JS output directory */
+    "rootDir": "./src",       /* Source directory for TypeScript files */
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],  /* Include all TypeScript files in src */
+  "exclude": [
+    "node_modules",
+    "build",                /* Exclude build directory if it's part of your root plugin structure */
+    "assets/js",            /* Exclude the output directory to prevent conflicts */
+    "postcss.config.js",
+    "tailwind.config.js",
+    "webpack.config.js"
+  ]
+}

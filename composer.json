@@ -1,0 +1,45 @@
+{
+	"name": "mahbub/wordpress-project-template",
+	"description": "A simple starter kit to work in WordPress plugin development using WordPress Rest API, WP-script",
+	 "type": "wordpress-plugin",
+	 "license": "GPL-2.0-or-later",
+	    "authors": [
+        {
+            "name": "Mahbub Hussain",
+            "email": "mahbubhussaincse@gmail.com"
+        }
+    ],
+"require-dev": {
+        "wp-coding-standards/wpcs": "dev-master",
+        "dealerdirect/phpcodesniffer-composer-installer": "dev-master",
+        "tareq1988/wp-php-cs-fixer": "dev-master",
+        "phpcompatibility/phpcompatibility-wp": "dev-master",
+        "wp-phpunit/wp-phpunit": "^6.0",
+        "yoast/phpunit-polyfills": "^1.0",
+        "phpunit/phpunit": "^9.5"
+    },
+	    "autoload": {
+        "psr-4": {
+            "App\\JobFind\\": "includes/"
+        }
+    },
+	"scripts": {
+		"lint": "./vendor/bin/phpcs --standard=phpcs.xml",
+		"phpcs": [
+            "phpcs -p -s"
+        ],
+        "phpcbf": [
+            "phpcbf -p"
+        ]
+	},
+	 "require": {
+        "php": ">=7.0.0|8.0"
+    },
+	"config": {
+		"allow-plugins": {
+			"squizlabs/php_codesniffer": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"wp-coding-standards/wpcs": true
+		}
+	}
+}

@@ -1,0 +1,11 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "assets/css/job-find-main";
+
+
+.app-title{
+    color:red;
+    background-color: blue;
+    font-size: 100px;
+}
