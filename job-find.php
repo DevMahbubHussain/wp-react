@@ -140,7 +140,7 @@ final class JobFind
 	 */
 	public function activate()
 	{
-		$this->flush_rewrite_rules();
+		$this->install();
 	}
 
 	/**
@@ -157,6 +157,21 @@ final class JobFind
 	private function flush_rewrite_rules()
 	{
 		flush_rewrite_rules();
+	}
+
+	/**
+	 * Run the installer to create necessary migrations.
+	 *
+	 * @since 0.1.0
+	 *
+	 * @return void
+	 */
+
+	private function install()
+	{
+		$installer = new \App\JobFind\Setup\Installer();
+		$installer->run();
+		// var_dump(get_class_methods($installer));
 	}
 
 	/**
